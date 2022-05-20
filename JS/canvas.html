@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvasId" height="400" width="400"></canvas>
+  </body>
+</html>
+<script>
+  // https://www.bilibili.com/video/BV1Vf4y1T7bw?p=177
+  let canvas = document.querySelector("#canvasId");
+  let ctx = canvas.getContext("2d");
+  ctx.beginPath();
+  //起点设置为100，100
+  ctx.moveTo(75, 50);
+  //终点坐标100，200
+  ctx.lineTo(100, 75);
+  ctx.lineTo(100, 25);
+  //起点终点闭合
+  ctx.closePath();
+  //线的颜色
+  ctx.strokeStyle = "purple";
+  ctx.fillStyle = "red";
+  ctx.fill();
+  //
+
+  ctx.stroke();
+</script>
