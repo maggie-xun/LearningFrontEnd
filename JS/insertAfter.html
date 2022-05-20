@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p></p>
+        <span></span>
+    </div>
+</body>
+<script>
+    Element.prototype.insertAfter = function (target, afterEle) {
+        var otarget = document.getElementsByTagName(target)[0];
+        if (afterEle.nextElementSibling) {
+            this.insertBefore(target, afterEle.nextElementSibling)
+        }
+        else {
+            this.appendChild(target)
+        }
+    }
+    let father = document.getElementsByTagName('div')[0];
+    let op = document.getElementsByTagName('span')[0];
+    let target = document.createElement('a')
+    father.insertAfter(target, op);
+
+</script>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="/123">百度</a>
+    <button id="btn">去百度</button>
+  </body>
+  <script>
+    const state = { page_id: 1, user_id: 5 };
+    const title = "";
+    window.addEventListener("popstate", (event) => {
+      console.log(event);
+    });
+    window.onpopstate = function (e) {
+      console.log(e);
+    };
+    document.getElementById("btn").onclick = function goto(e) {
+      //   window.history.pushState(state, title, "http://www.baidu.com");
+
+      window.location = "/123";
+    };
+  </script>
+</html>

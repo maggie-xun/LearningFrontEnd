@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .checkbox {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            position: relative;
+        }
+
+        .checkbox label {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            background-color: #000;
+            /* position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            margin-left: -10px;
+            left: 50%; */
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .checkbox input {
+            display: none;
+            /* opacity: 0; */
+        }
+
+        .checkbox input[type='checkbox']:checked+label {
+            opacity: 1;
+        }
+
+        .container {
+            display: inline-block
+        }
+
+        .text1 {
+            margin-right: 10px;
+
+        }
+
+        .text2 {
+            margin-left: 10px;
+        }
+
+        p {
+            /* display: inline-block;   */
+            /*打开重叠消失*/
+            color: #fff;
+            background: #888;
+            width: 200px;
+            line-height: 100px;
+            text-align: center;
+            margin: 100px;
+        }
+
+        .pos1 {
+            height: 200px;
+            width: 200px;
+            background-color: darkmagenta;
+        }
+
+        .pos1 .pos2 {
+            bottom: 20px;
+            position: relative;
+            height: 100px;
+            width: 100px;
+            background-color: darkorange;
+        }
+
+        table {
+            caption-side: bottom;
+            border-collapse: collapse;
+            /*边框合并*/
+            table-layout: fixed;
+            /*单元格宽度平分*/
+        }
+    </style>
+</head>
+
+<body>
+    <span>自定义checkbox</span>
+    <div class="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox"></label>
+
+    </div>
+
+
+    <span>行内元素margin不塌陷</span>
+    <span class="text1">123</span>
+    <span class="text2">456</span>
+
+    <span>块内元素margin塌陷</span>
+    <p>ABC</p>
+    <p>abc</p>
+
+    <span>相对定位时top,left,right,bottom,margin的表现</span>
+    <div class="pos1">
+        <div class="pos2"></div>
+    </div>
+
+    <table>
+        <caption>table标题</caption>
+    </table>
+
+
+</body>
+
+</html>

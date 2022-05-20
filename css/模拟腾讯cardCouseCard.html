@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .clearfix {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .cards-wrap {
+            border: 1px solid #000;
+        }
+
+        .cards-wrap .cards-list {
+            border: 1px solid blue;
+        }
+
+        .cards-wrap .cards-list .cards-item {
+            float: left;
+            width: 220px;
+            height: 224px;
+            padding: 10px 10px 7px;
+            border: 1px solid transparent
+        }
+
+        .cards-wrap .cards-list .cards-item:hover {
+            border-color: #ddd;
+        }
+
+        /* .cards-wrap .cards-list .cards-item .card-link {} */
+
+        .cards-wrap .cards-list .cards-item .card-img {
+            width: 220px;
+            height: 124px;
+            box-sizing: border-box;
+        }
+
+        .cards-wrap .cards-list .cards-item .item-tt {
+            position: relative;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            height: 40px;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards-wrap">
+        <ul class="cards-list clearfix">
+            <li class="cards-item">
+                <a href="">
+                    <img class="card-img" src="./card.png" alt="">
+                </a>
+                <h4 class="item-tt">【精品直播】美剧大片英语原声精彩讲解</h4>
+            </li>
+            <li class="cards-item">
+                <a href="">
+                    <img class="card-img" src="./card.png" alt="">
+                </a>
+                <h4 class="item-tt">【精品直播】美剧大片英语原声精彩讲解</h4>
+            </li>
+            <li class="cards-item">
+                <a href="">
+                    <img class="card-img" src="./card.png" alt="">
+                </a>
+                <h4 class="item-tt">【精品直播】美剧大片英语原声精彩讲解</h4>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    function Car() {
+        this.brand = "Benz"
+    }
+    Car.prototype = {
+        brand: 'Manz',
+        intro: function () {
+            console.log('Brand is' + this.brand)
+        }
+    }
+    var car = new Car();
+    car.intro();//Brand is Benz
+
+
+
+</script>
+
+</html>

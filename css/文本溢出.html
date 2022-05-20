@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .single {
+            border: 1px solid #000;
+            width: 100px;
+            height: 22px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+
+        div p {
+            border: 1px solid #000000;
+            width: 100px;
+
+            /* Firefox */
+            display: -moz-box;
+            -moz-box-orient: vertical;
+
+            /* Safari, Opera, and Chrome */
+            display: -webkit-box;
+            /* div子元素纵向排列 */
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <p class="single">
+        移除了移除了移除了移除了移除了移除了移除了移除了移除了移除了
+    </p>
+
+    <div>
+        <p>
+            移除了移除了移除了移除了移除了移除了移除了移除了移除了移除了
+            移除了移除了移除了移除了移除了移除了移除了移除了移除了移除了
+            移除了移除了移除了移除了移除了移除了移除了移除了移除了移除了
+        </p>
+
+    </div>
+    <!-- <div>
+        移除了移除了移除了移除了移除了移除了移除了移除了移除了移除了
+    </div> -->
+
+
+</body>
+
+</html>

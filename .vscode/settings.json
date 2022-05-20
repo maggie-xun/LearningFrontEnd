@@ -1,0 +1,7 @@
+{
+  "git.ignoreLimitWarning": true,
+  "workbench.colorTheme": "One Dark Modern",
+  "workbench.editorAssociations": {
+    "*.md": "default"
+  }
+}

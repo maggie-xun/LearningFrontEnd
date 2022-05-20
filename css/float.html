@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent {
+        display: flex;
+    }
+
+    .item {
+        flex: 1;
+        border: 1px solid #333;
+    }
+
+    .item2 {
+        flex: 0 0 50%
+    }
+
+    .HolyGrail {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    header footer {
+        flex: 1;
+        background-color: darkgray;
+    }
+
+    .HolyGrail-body {
+        display: flex;
+        flex: 1
+    }
+
+    .HolyGrail-content {
+        flex: 1;
+        border: 1px solid #333;
+    }
+
+    .HolyGrail-nav,
+    .HolyGrail-ads {
+        flex: 0 0 150px;
+        border: 1px solid #333;
+    }
+
+    .HolyGrail-nav {
+        order: -1
+    }
+</style>
+
+<body class="HolyGrail">
+
+    <!-- <div class="parent">
+        <div class="item item2">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div> -->
+    <header>...</header>
+    <div class="HolyGrail-body">
+        <main class="HolyGrail-content">HolyGrail-content</main>
+        <nav class="HolyGrail-nav">HolyGrail-nav</nav>
+        <aside class="HolyGrail-ads">HolyGrail-ads</aside>
+    </div>
+    <footer>...</footer>
+</body>
+
+</html>

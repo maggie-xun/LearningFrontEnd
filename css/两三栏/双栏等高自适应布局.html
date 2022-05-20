@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="parent" style="background-color: lightgrey">
+      <!-- <span>双栏等高自适应</span> -->
+      <div class="left" style="background-color: lightblue">
+        <p>left left left</p>
+      </div>
+      <div class="right" style="background-color: lightgreen">
+        <p>right</p>
+        <p>right</p>
+      </div>
+    </div>
+
+    <div class="parent-dinggao">
+      <!-- <span>左侧定宽双栏布局</span> -->
+      <div class="leftSelf">left</div>
+      <div class="rightSelf">right</div>
+    </div>
+  </body>
+</html>
+
+<style>
+  /* 绝对定位实现 */
+  /* .leftSelf {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: darkturquoise;
+    height: 100%;
+  } */
+
+  /* 浮动实现,定宽 */
+  .leftSelf {
+    width: 200px;
+    float: left;
+    background-color: blue;
+    height: 400px;
+  }
+
+  .rightSelf {
+    overflow: hidden;
+    background-color: darkseagreen;
+    height: 400px;
+  }
+
+  .parent .left {
+    float: left;
+    margin-right: 20px;
+
+    /* padding-bottom: 10000px; */
+    /*  等高 */
+    /* margin-bottom: -10000px; */
+    /*  等高 */
+  }
+
+  .parent .right {
+    overflow: hidden;
+    zoom: 1;
+    /* padding-bottom: 10000px; */
+    /*  等高 */
+    /* margin-bottom: -10000px; */
+    /*  等高 */
+  }
+</style>

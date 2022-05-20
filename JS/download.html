@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div onclick="download()">
+        点击下载
+    </div>
+    <div class="dropdown">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+<script>
+    function downloadFile(content, filename) {
+        var a = document.createElement('a')
+        var blob = new Blob([content])
+        var url = window.URL.createObjectURL(blob)
+        a.href = url
+        a.download = filename
+        a.click()
+        window.URL.revokeObjectURL(url)
+    }
+
+    function download() {
+        var url = 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=20550366,3650143321&fm=26&gp=0.jpg' // demo图片
+        ajax(url, function (xhr) {
+            var filename = 'xxx.' + url.replace(/(.*\.)/, '') // 自定义文件名+后缀
+            downloadFile(xhr.response, filename)
+        }, {
+            responseType: 'blob'
+        })
+    }
+
+    function ajax(url, callback, options) {
+        window.URL = window.URL || window.webkitURL
+        var xhr = new XMLHttpRequest()
+        xhr.open('get', url, true)
+        if (options.responseType) {
+            xhr.responseType = options.responseType
+        }
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                callback(xhr)
+            }
+        }
+        xhr.send()
+    }
+</script>
+
+</html>

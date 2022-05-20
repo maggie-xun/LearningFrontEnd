@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>你好</p>
+    </div>
+    <script>
+        let odiv = document.getElementsByTagName('div')[0]
+        Element.prototype.myChild = function () {
+            let childNodes = odiv.childNodes;
+            let eleArr = {
+                length: 0,
+                push: Array.prototype.push,
+
+            }
+            for (let i = 0; i < childNodes.length; i++) {
+                if (childNodes[i].nodeType == 1) {
+                    eleArr.push(childNodes[i])
+                }
+            }
+            return eleArr
+
+        }
+
+        console.log(odiv.myChild());
+    </script>
+</body>
+
+</html>

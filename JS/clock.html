@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div></div>
+</head>
+
+<body>
+    <script>
+        let odiv = document.getElementsByTagName('div')[0]
+        Date.prototype.getClock = function () {
+            let _this = this;
+            let dateStr = _this.getFullYear() + '/' + timeFormat((_this.getMonth() + 1)) + '/' + timeFormat(_this.getDate()) + ' ' + timeFormat(_this.getHours()) + ':' + timeFormat(_this.getMinutes()) + ':' + timeFormat(_this.getSeconds());
+            return dateStr
+        }
+
+        setInterval(() => {
+            odiv.innerText = new Date().getClock();
+        }, 1000)
+
+        function timeFormat(num) {
+            if (num < 10) {
+                return '0' + num
+            }
+            return num
+        }
+    </script>
+</body>
+
+</html>

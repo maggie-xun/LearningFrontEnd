@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="input" />
+    <script>
+      let input = document.querySelector("input");
+      input.addEventListener("keyup", throttle(output, 2000));
+      function debounce(fn, time) {
+        return function () {
+          let _this = this,
+            args = arguments;
+          clearTimeout(fn.id);
+          fn.id = setTimeout(() => {
+            fn.call(_this, ...args);
+          }, time);
+        };
+      }
+      
+      function throttle(fn, time) {
+        let timer;
+        return function () {
+          let _this = this,
+            args = arguments;
+          if (!timer) {
+            timer = setTimeout(() => {
+              timer = null;
+              fn.call(_this, ...arguments);
+            }, time);
+          }
+        };
+      }
+      function output() {
+        console.log("aaa");
+      }
+    </script>
+  </body>
+</html>

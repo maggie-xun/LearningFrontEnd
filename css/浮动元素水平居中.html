@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: aqua;
+        float: left;
+        position: relative;
+        left: 50%;
+      }
+      /* p
+       float: left;
+              position: relative;
+              transform: translate(-50%);
+              background-color: red; 
+        } */
+      p {
+        position: relative;
+        float: left;
+        width: 100px;
+        left: 50%;
+        margin-left: -50px;
+        background: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="parent">
+        <div class="child"></div>
+    </div> -->
+
+    <!-- <div class="parent">
+      <div class="child">让绝对定位的元素水平居中对齐。</div>
+    </div> -->
+    <div class="box">
+      <p>我是浮动的</p>
+      <!-- <p>我也是居中的</p> -->
+    </div>
+  </body>
+</html>
