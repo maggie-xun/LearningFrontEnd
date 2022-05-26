@@ -1,4 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+import { setupStore } from "./store";
 
-createApp(App).mount('#app')
+async function bootstrap() {
+  const app = createApp(App);
+
+  setupStore(app);
+  app.mount("#app");
+}
+
+bootstrap();
